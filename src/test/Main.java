@@ -1,5 +1,6 @@
 package test;
 
+import domain.Inventory;
 import domain.MenuOptions;
 import domain.Product;
 
@@ -10,6 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Product product = new Product();
         MenuOptions menuOptions = new MenuOptions();
+        Inventory inventory = new Inventory();
 
         menuOptions.printMenu();
         int option = scanner.nextInt();
@@ -17,7 +19,7 @@ public class Main {
         switch (option){
             case 1:
                 product.registrationProduct();
-
+                inventory.addInventory(product);
                 break;
         }
 
