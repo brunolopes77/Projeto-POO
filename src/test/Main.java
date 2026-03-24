@@ -14,10 +14,14 @@ public class Main {
         menuOptions.printMenu();
         int option = scanner.nextInt();
 
-        product.registrationProduct();
+        switch (option){
+            case 1:
+                product.registrationProduct();
 
-        System.out.println(product.getName());
-        System.out.println(product.getPrice());
-        System.out.println(product.getQuantity());
+                break;
+        }
+
+
+
     }
 }
