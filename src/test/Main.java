@@ -1,29 +1,29 @@
 package test;
 
-import domain.Inventory;
-import domain.MenuOptions;
-import domain.Product;
+import domain.Estoque;
+import domain.Menu;
+import domain.Produto;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Product product = new Product();
-        MenuOptions menuOptions = new MenuOptions();
-        Inventory inventory = new Inventory();
+        Produto produto = new Produto();
+        Menu menu = new Menu();
+        Estoque estoque = new Estoque();
 
-        menuOptions.printMenu();
+        menu.imprimeMenu();
         int option = scanner.nextInt();
 
-        switch (option){
-            case 1:
-                product.registrationProduct();
-                inventory.addInventory(product);
-                break;
+        for (int i = 0; i < 3; i++) {
+            switch (option) {
+                case 1:
+                    produto.cadastroProduto();
+                    estoque.addProduto(produto);
+                    continue;
+            }
         }
-
-
-
+        estoque.imprimeEstoque();
     }
 }

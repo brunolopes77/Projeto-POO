@@ -3,7 +3,7 @@ package domain;
 
 import java.util.Scanner;
 
-public class Product {
+public class Produto {
     private String name;
     private float price;
     private int quantity;
@@ -34,7 +34,7 @@ public class Product {
 
     Scanner scanner = new Scanner(System.in);
 
-    public void registrationProduct(){
+    public void cadastroProduto(){
         System.out.print("Digite o nome desse produto: ");
         setName(scanner.nextLine());
         System.out.print("Digite o preço: ");
