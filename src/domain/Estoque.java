@@ -11,12 +11,13 @@ public class Estoque {
             produtos[count] = produto;
 
         }
+        aux++;
         count = aux;
     }
     public void imprimeEstoque(){
-        System.out.println(produtos[0].getName());
-        System.out.println(produtos[1].getName());
-        System.out.println(produtos[2].getName());
+        System.out.println(produtos[0].getQuantity());
+        System.out.println(produtos[1].getQuantity());
+        System.out.println(produtos[2].getQuantity());
     }
 
 
