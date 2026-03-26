@@ -4,43 +4,44 @@ package domain;
 import java.util.Scanner;
 
 public class Produto {
-    private String name;
-    private float price;
-    private int quantity;
+    private String nome;
+    private float preco;
+    private int quantidade;
 
-    public String getName() {
-        return this.name;
+    public String getNome() {
+        return this.nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public float getPrice() {
-        return price;
+    public float getPreco() {
+        return preco;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     Scanner scanner = new Scanner(System.in);
 
     public void cadastroProduto(){
-        System.out.print("Digite o nome desse produto: ");
-        setName(scanner.nextLine());
-        System.out.print("Digite o preço: ");
-        setPrice(scanner.nextFloat());
-        System.out.print("Digite a quantidade: ");
-        setQuantity(scanner.nextInt());
-    }
+        scanner.nextLine();
 
+        System.out.print("Digite o nome desse produto: ");
+        setNome(scanner.nextLine());
+        System.out.print("Digite o preço: ");
+        setPreco(scanner.nextFloat());
+        System.out.print("Digite a quantidade: ");
+        setQuantidade(scanner.nextInt());
+    }
 }

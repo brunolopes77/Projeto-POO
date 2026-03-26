@@ -15,15 +15,13 @@ public class Main {
 
         menu.imprimeMenu();
         int option = scanner.nextInt();
-
         for (int i = 0; i < 3; i++) {
             switch (option) {
                 case 1:
                     produto.cadastroProduto();
                     estoque.addProduto(produto);
-                    continue;
             }
         }
-        estoque.imprimeEstoque();
+        estoque.imprimeNome();
     }
 }

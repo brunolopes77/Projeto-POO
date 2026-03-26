@@ -2,23 +2,25 @@ package domain;
 
 public class Estoque {
 
-    Produto[] produtos = new Produto[3];
+    String[] arrayNome = new String[3];
     int count = 0;
     int aux = 0;
+    String nome;
+
     public void addProduto(Produto produto) {
-
-        for (count = aux  ; count < aux + 1; count++) {
-            produtos[count] = produto;
-
+        for (count = aux; count < aux + 1; count++) {
+            nome = produto.getNome();
+            arrayNome[count] = nome;
         }
         aux++;
         count = aux;
     }
-    public void imprimeEstoque(){
-        System.out.println(produtos[0].getQuantity());
-        System.out.println(produtos[1].getQuantity());
-        System.out.println(produtos[2].getQuantity());
+    public void imprimeNome(){
+        for (int i = 0; i < 3; i++) {
+            System.out.println(arrayNome[i]);
+        }
     }
 
-
 }
+
+
