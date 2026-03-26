@@ -22,6 +22,6 @@ public class Main {
                     estoque.addProduto(produto);
             }
         }
-        estoque.imprimeNome();
+        estoque.imprimeProdutos();
     }
 }

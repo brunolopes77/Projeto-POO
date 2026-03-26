@@ -35,10 +35,8 @@ public class Produto {
     Scanner scanner = new Scanner(System.in);
 
     public void cadastroProduto(){
-        scanner.nextLine();
-
         System.out.print("Digite o nome desse produto: ");
-        setNome(scanner.nextLine());
+        setNome(scanner.next());//Só armazena um nome por causa do next();
         System.out.print("Digite o preço: ");
         setPreco(scanner.nextFloat());
         System.out.print("Digite a quantidade: ");
