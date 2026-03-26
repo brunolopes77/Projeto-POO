@@ -2,12 +2,12 @@ package domain;
 
 public class Estoque {
 
-    String[][] arrayProduto = new String[3][];
+    String[][] arrayProduto = new String[3][3];
     int count = 0;
     int aux = 0;
-    String nome;
-    float preco;
-    int quantidade;
+    String nome = " ";
+    float preco = 0;
+    int quantidade = 0;
 
     public void addProduto(Produto produto) {
         for (count = aux; count < aux + 1; count++) {
@@ -28,9 +28,10 @@ public class Estoque {
 
     public void imprimeProdutos() {
         for (int i = 0; i < 3; i++) {
-           // for (int j = 0; j < 3; j++) {
-                System.out.println(arrayProduto[i]);
+            for (int j = 0; j < 3; j++) {
+                System.out.println(arrayProduto[i][j]);
 
+            }
         }
     }
 }
