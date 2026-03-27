@@ -28,22 +28,24 @@ public class Estoque {
         count = aux;
     }
 
-    public void removeProduto(){
+    public void removeProduto() {
         int i;
         System.out.println("Qual produto deseja remover?");
         for (i = 1; i < 4; i++) {
-            System.out.println(i+". "+arrayProduto[i][1]);
+            System.out.println(i + ". " + arrayProduto[i][1]);
         }
         System.out.print("(coloque a posição dele): ");
         i = scanner.nextInt();
-        arrayProduto[i][1] = "-------";
+        for (int j = 1; j < 4; j++) {
+            arrayProduto[i][j] = "-------";
+        }
     }
 
     public void imprimeProdutos() {
         for (int i = 1; i < 4; i++) {
-           // for (int j = 1; j < 4; j++) {
+            for (int j = 1; j < 4; j++) {
                 System.out.println(arrayProduto[i][1]);
-
+            }
             System.out.println();
         }
     }
