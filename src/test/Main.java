@@ -12,23 +12,25 @@ public class Main {
         Produto produto = new Produto();
         Menu menu = new Menu();
         Estoque estoque = new Estoque();
-
-        for (int i = 0; i < 2; i++) {
+        String outraAcao;
+        do {
             menu.imprimeMenu();
             int option = scanner.nextInt();
 
-            for (int j = 0; j < 3; j++) {
-                switch (option) {
-                    case 1:
-                        produto.cadastroProduto();
-                        estoque.addProduto(produto);
-                        break;
-                    case 2:
-                        estoque.removeProduto();
-                }
-
+            switch (option) {
+                case 1:
+                    produto.cadastroProduto();
+                    estoque.addProduto(produto);
+                    break;
+                case 2:
+                    estoque.removeProduto();
+                    break;
+                case 3:
+                    estoque.imprimeProdutos();
+                    break;
             }
-        }
-        estoque.imprimeProdutos();
+            System.out.println("Deseja volta para o menu para fazer outra ação? [S/N]");
+            outraAcao = scanner.next();
+        }while(outraAcao.equalsIgnoreCase("S"));
     }
 }
