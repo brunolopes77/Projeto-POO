@@ -26,9 +26,9 @@ public class Main {
                     case 2:
                         estoque.removeProduto();
                 }
-                break;
+
             }
         }
-        //estoque.imprimeProdutos();
+        estoque.imprimeProdutos();
     }
 }
