@@ -15,18 +15,14 @@ public class Main {
 
         menu.imprimeMenu();
         int option = scanner.nextInt();
-        char cadastrarOutro;
 
-        do {
+        for (int i = 0; i < 3; i++) {
             switch (option) {
                 case 1:
                     produto.cadastroProduto();
                     estoque.addProduto(produto);
             }
-            System.out.println("Deseja adicionar outro produto ao estoque? [s/n]");
-            cadastrarOutro = scanner.next().charAt(0);
-        }while(cadastrarOutro.equals("s"));
-        estoque.imprimeProdutos();
+        }
+        estoque.imprimeProdutos();q
     }
 }
-
