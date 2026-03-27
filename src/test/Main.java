@@ -13,16 +13,22 @@ public class Main {
         Menu menu = new Menu();
         Estoque estoque = new Estoque();
 
-        menu.imprimeMenu();
-        int option = scanner.nextInt();
+        for (int i = 0; i < 2; i++) {
+            menu.imprimeMenu();
+            int option = scanner.nextInt();
 
-        for (int i = 0; i < 3; i++) {
-            switch (option) {
-                case 1:
-                    produto.cadastroProduto();
-                    estoque.addProduto(produto);
+            for (int j = 0; j < 3; j++) {
+                switch (option) {
+                    case 1:
+                        produto.cadastroProduto();
+                        estoque.addProduto(produto);
+                        break;
+                    case 2:
+                        estoque.removeProduto();
+                }
+                break;
             }
         }
-        estoque.imprimeProdutos();q
+        //estoque.imprimeProdutos();
     }
 }
