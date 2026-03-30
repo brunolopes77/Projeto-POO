@@ -25,7 +25,6 @@ public class Estoque {
             }
         }
         aux++;
-        count = aux;
     }
 
     public void removeProduto() {
