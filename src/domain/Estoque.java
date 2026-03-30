@@ -12,20 +12,18 @@ public class Estoque {
     int quantidade;
 
     public void addProduto(Produto produto) {
-        for (count = aux; count < aux + 1; count++) {
-            for (int i = 1; i < 4; i++) {
-                nome = produto.getNome();
-                arrayProduto[count][i] = nome;
-                i++;
-                preco = produto.getPreco();
-                arrayProduto[count][i] = String.valueOf(preco);
-                i++;
-                quantidade = produto.getQuantidade();
-                arrayProduto[count][i] = String.valueOf(quantidade);
-            }
-        }
+        nome = produto.getNome();
+        arrayProduto[aux][1] = nome;
+
+        preco = produto.getPreco();
+        arrayProduto[aux][2] = String.valueOf(preco);
+
+        quantidade = produto.getQuantidade();
+        arrayProduto[aux][3] = String.valueOf(quantidade);
+
         aux++;
     }
+
 
     public void removeProduto() {
         int i;
@@ -49,6 +47,7 @@ public class Estoque {
         }
     }
 }
+
 
 
 
