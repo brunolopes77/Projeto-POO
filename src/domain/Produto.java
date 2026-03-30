@@ -8,11 +8,22 @@ public class Produto {
     private float preco;
     private int quantidade;
 
+    Scanner scanner = new Scanner(System.in);
+
+    public void cadastroProduto(){
+        System.out.print("Digite o nome desse produto: ");
+        setNome(scanner.next());//Só armazena um nome por causa do next();
+        System.out.print("Digite o preço: ");
+        setPreco(scanner.nextFloat());
+        System.out.print("Digite a quantidade: ");
+        setQuantidade(scanner.nextInt());
+    }
+
     public String getNome() {
         return this.nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome){
         this.nome = nome;
     }
 
@@ -30,16 +41,5 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
-
-    Scanner scanner = new Scanner(System.in);
-
-    public void cadastroProduto(){
-        System.out.print("Digite o nome desse produto: ");
-        setNome(scanner.next());//Só armazena um nome por causa do next();
-        System.out.print("Digite o preço: ");
-        setPreco(scanner.nextFloat());
-        System.out.print("Digite a quantidade: ");
-        setQuantidade(scanner.nextInt());
     }
 }

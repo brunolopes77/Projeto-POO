@@ -3,7 +3,6 @@ package test;
 import domain.Estoque;
 import domain.Menu;
 import domain.Produto;
-
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +26,9 @@ public class Main {
                     break;
                 case 3:
                     estoque.imprimeProdutos();
+                    break;
+                default:
+                    System.out.println("Opção inválida");
                     break;
             }
             System.out.println("Deseja volta para o menu para fazer outra ação? [S/N]");
