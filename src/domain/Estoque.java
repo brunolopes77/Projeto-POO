@@ -24,7 +24,6 @@ public class Estoque {
         aux++;
     }
 
-
     public void removeProduto() {
 
         System.out.println("Qual produto deseja remover?");
